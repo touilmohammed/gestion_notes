@@ -9,8 +9,12 @@ public class etudiant {
 	public etudiant(int id , String nom) {
 		this.id=id;
 		this.nom=nom;
-		this.note=10;
+		this.note=10.0;
 		
+		
+	}
+	public String toString(){
+		return this.nom + " : " + this.note;
 	}
 
 }
