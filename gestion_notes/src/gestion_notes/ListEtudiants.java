@@ -7,8 +7,10 @@ public class ListEtudiants extends ArrayList<etudiant> {
 	
 	@Override
 	public boolean add(etudiant e) {
-		if(this.contains(e)) return false;
-		return super.add(e);
+		int index=indexOf(e);
+		if(index<0) return super.add(e);
+		this.set(index, e);
+		return true;
 	}
 
 }
